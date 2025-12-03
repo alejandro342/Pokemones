@@ -13,10 +13,10 @@ import com.api.pokemones.domain.usecase.GetFlavorTextDescriptionUseCase
 import com.api.pokemones.domain.usecase.GetPokemonColorUseCase
 import com.api.pokemones.domain.usecase.GetPokemonDetailUseCase
 import com.api.pokemones.domain.usecase.GetPokemonEvolutionsUseCase
+import com.api.pokemones.domain.usecase.GetSpriteUrlsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -31,7 +31,8 @@ class PokemonViewModelColor @Inject constructor(
     private val getPokemonColorUseCase: GetPokemonColorUseCase,
     private val getPokemonEvolutionsUseCase: GetPokemonEvolutionsUseCase,
     private val getPokemonDetailUseCase: GetPokemonDetailUseCase,
-    private val getFlavorTextDescriptionUseCase: GetFlavorTextDescriptionUseCase
+    private val getFlavorTextDescriptionUseCase: GetFlavorTextDescriptionUseCase,
+    private val getSpriteUrls: GetSpriteUrlsUseCase
 ) : ViewModel() {
 
     private val _pokemonColors = mutableStateMapOf<Int, Color>()
@@ -41,10 +42,8 @@ class PokemonViewModelColor @Inject constructor(
     val evolutions: StateFlow<List<String>> = _evolutions
 
     private val _pokemonDetail = MutableStateFlow<PokemonDetail?>(null)
-    val pokemonDetail: StateFlow<PokemonDetail?> = _pokemonDetail.asStateFlow()
 
     private val _spriteUrls = MutableStateFlow<List<String>>(emptyList())
-    val spriteUrls: StateFlow<List<String>> = _spriteUrls
 
 
     var flavorDescription by mutableStateOf("")
@@ -80,6 +79,7 @@ class PokemonViewModelColor @Inject constructor(
 
             } catch (e: Exception) {
                 _pokemonColors[pokemonId] = Color.Gray
+                print("Error: $e fetch color")
             }
         }
     }
@@ -91,6 +91,7 @@ class PokemonViewModelColor @Inject constructor(
                 _evolutions.value = evolutionNames
             } catch (e: Exception) {
                 _evolutions.value = emptyList()
+                print("error List evolutions: $e")
             }
         }
     }
@@ -107,21 +108,7 @@ class PokemonViewModelColor @Inject constructor(
         }
     }
 
-
     fun setPokemonSprites(pokemon: PokemonDetail) {
-        val urls = listOfNotNull(
-            pokemon.sprites.front_default,
-            pokemon.sprites.back_default,
-            pokemon.sprites.front_shiny,
-            pokemon.sprites.back_shiny,
-            pokemon.sprites.front_female,
-            pokemon.sprites.back_female,
-            pokemon.sprites.front_shiny_female,
-            pokemon.sprites.back_shiny_female,
-            pokemon.sprites.animated_front,
-            pokemon.sprites.animated_back
-
-        )
-        _spriteUrls.value = urls
+        _spriteUrls.value = getSpriteUrls(pokemon)
     }
 }

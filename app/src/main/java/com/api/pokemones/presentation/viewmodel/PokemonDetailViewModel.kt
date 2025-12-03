@@ -1,11 +1,11 @@
 package com.api.pokemones.presentation.viewmodel
 
-import android.util.Log
 import androidx.compose.ui.graphics.Brush
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.api.pokemones.domain.model.PokemonDetail
 import com.api.pokemones.domain.usecase.GetPokemonDetailUseCase
+import com.api.pokemones.domain.usecase.GetSpriteUrlsUseCase
 import com.api.pokemones.presentation.ui.components.getMetallicBrushForType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +21,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class PokemonDetailViewModel @Inject constructor(
-    private val getPokemonDetailUseCase: GetPokemonDetailUseCase
+    private val getPokemonDetailUseCase: GetPokemonDetailUseCase,
+    private val getSpriteUrls: GetSpriteUrlsUseCase
 ) : ViewModel() {
 
     private val _backgroundBrush = MutableStateFlow<Brush?>(null)
@@ -48,22 +49,6 @@ class PokemonDetailViewModel @Inject constructor(
     }
 
     fun setPokemonSprites(pokemon: PokemonDetail) {
-        val urls = listOfNotNull(
-            pokemon.sprites.front_default,
-            pokemon.sprites.back_default,
-            pokemon.sprites.front_shiny,
-            pokemon.sprites.back_shiny,
-            pokemon.sprites.front_female,
-            pokemon.sprites.back_female,
-            pokemon.sprites.front_shiny_female,
-            pokemon.sprites.back_shiny_female,
-            pokemon.sprites.animated_front,
-            pokemon.sprites.animated_back
-
-        )
-        _spriteUrls.value = urls
-
-        Log.d("VAAT", "Spri: ")
+        _spriteUrls.value = getSpriteUrls(pokemon)
     }
-
 }
