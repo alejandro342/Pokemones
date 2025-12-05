@@ -7,5 +7,5 @@ sealed class Routes(val route: String) {
     object ScreenDetailPokemon : Routes("pokemon_detail/{pokemonId}") {
         fun createRoute(pokemonId: Int) = "pokemon_detail/$pokemonId"
     }
-
+    object ScreenSplash: Routes("viewSplash")
 }
