@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: io.kotzilla:kotzilla-sdk-compose-android:1.3.1@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/c427b0a88ab59e7bce7f5c779985ea35/transformed/kotzilla-sdk-compose-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/c427b0a88ab59e7bce7f5c779985ea35/transformed/kotzilla-sdk-compose-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.kotzilla/kotzilla-sdk-compose-android/1.3.1/a77e24828be316989ff325a8df987402aa922dc/kotzilla-sdk-compose-android-1.3.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.kotzilla/kotzilla-sdk-compose-android/1.3.1/a77e24828be316989ff325a8df987402aa922dc/kotzilla-sdk-compose-android-1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

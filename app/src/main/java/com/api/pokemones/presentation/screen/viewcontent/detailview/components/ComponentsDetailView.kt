@@ -49,6 +49,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
@@ -170,20 +171,25 @@ fun PokemonImage(
     contentScale: ContentScale = ContentScale.Fit
 ) {
     val context = LocalContext.current
-    val imageLoader = ImageLoader.Builder(context).components {
-        if (Build.VERSION.SDK_INT >= 28) {
-            add(ImageDecoderDecoder.Factory())
-        } else {
-            add(GifDecoder.Factory())
+    val imageLoader = remember {
+        ImageLoader.Builder(context).components {
+            if (Build.VERSION.SDK_INT >= 28) {
+                add(ImageDecoderDecoder.Factory())
+            } else {
+                add(GifDecoder.Factory())
+            }
         }
-    }.build()
+            .allowRgb565(true)
+            .build()
+    }
 
     AsyncImage(
-        model = ImageRequest.Builder(context).data(imageUrl).crossfade(true).build(),
+        model = ImageRequest.Builder(context).data(imageUrl).crossfade(false).build(),
         imageLoader = imageLoader,
         contentDescription = contentDescription,
         contentScale = contentScale,
-        modifier = modifier
+        modifier = modifier,
+        filterQuality = FilterQuality.None
     )
 }
 
@@ -229,7 +235,7 @@ fun PokeballCard(
         Box(
             modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
         ) {
-            PokemonImage(url, "pokemon", modifier = Modifier.size(60.dp))
+            PokemonImage(url, "pokemon", modifier = Modifier.size(70.dp))
         }
     }
 }

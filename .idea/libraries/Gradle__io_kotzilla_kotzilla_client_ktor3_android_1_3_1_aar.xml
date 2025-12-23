@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: io.kotzilla:kotzilla-client-ktor3-android:1.3.1@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/4517bb4268e61dec377ff997d14fd429/transformed/kotzilla-client-ktor3-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/4517bb4268e61dec377ff997d14fd429/transformed/kotzilla-client-ktor3-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.kotzilla/kotzilla-client-ktor3-android/1.3.1/f8a809dcf8b5ee204987b2d903d92e2c43b6f46f/kotzilla-client-ktor3-android-1.3.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.kotzilla/kotzilla-client-ktor3-android/1.3.1/f8a809dcf8b5ee204987b2d903d92e2c43b6f46f/kotzilla-client-ktor3-android-1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
