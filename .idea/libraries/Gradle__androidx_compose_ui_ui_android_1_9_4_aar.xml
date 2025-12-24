@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.compose.ui:ui-android:1.9.4@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/57d8b1eecdb52a28d671f6051c03eb7d/transformed/ui-release/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/4a348a2c19c449a5460a8ba4e901e7ee/transformed/ui-release/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/57d8b1eecdb52a28d671f6051c03eb7d/transformed/ui-release/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/57d8b1eecdb52a28d671f6051c03eb7d/transformed/ui-release/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/57d8b1eecdb52a28d671f6051c03eb7d/transformed/ui-release/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/4a348a2c19c449a5460a8ba4e901e7ee/transformed/ui-release/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/4a348a2c19c449a5460a8ba4e901e7ee/transformed/ui-release/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/4a348a2c19c449a5460a8ba4e901e7ee/transformed/ui-release/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

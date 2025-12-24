@@ -36,12 +36,6 @@ fun NavigationC() {
 
         composable(route = Routes.ScreenPokemon.route) { ViewPokemon(navController = navController) }
 
-        composable(route = Routes.ScreenPokemon.route) { ViewPokemon(navController = navController) }
-
-        composable(route = Routes.ScreenPokemon.route) {
-            ViewPokemon(navController = navController)
-        }
-
         composable(
             route = Routes.ScreenDetailPokemon.route,
             arguments = listOf(navArgument("pokemonId") { type = NavType.IntType })

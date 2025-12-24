@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.okhttp3:okhttp-android:5.1.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/01c86f9a910a6e1146372e7803dfe7c0/transformed/okhttp-release/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/01c86f9a910a6e1146372e7803dfe7c0/transformed/okhttp-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/f96b1829fe3420b023c54a73ea4f48dc/transformed/okhttp-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/f96b1829fe3420b023c54a73ea4f48dc/transformed/okhttp-release/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-android/5.1.0/9b0dc1c2ef8de8d8042fdf64deb05e2904e6e747/okhttp-android-5.1.0-javadoc.jar!/" />

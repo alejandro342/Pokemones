@@ -33,7 +33,7 @@ foundation = "1.9.3"
 uiGeometry = "1.9.4"
 foundationLayout = "1.9.4"
 #KOTZILLA
-kotzilla = "1.3.1"
+#kotzilla = "1.3.1"
 #KOIN
 koin = "3.5.3"
 
@@ -80,7 +80,7 @@ androidx-compose-foundation = { group = "androidx.compose.foundation", name = "f
 androidx-compose-ui-geometry = { group = "androidx.compose.ui", name = "ui-geometry", version.ref = "uiGeometry" }
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundationLayout" }
 #KOTZILLA
-kotzilla-sdk-compose = { group = "io.kotzilla", name = "kotzilla-sdk-compose", version.ref = "kotzilla" }
+#kotzilla-sdk-compose = { group = "io.kotzilla", name = "kotzilla-sdk-compose", version.ref = "kotzilla" }
 #KOIN
 
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
@@ -94,4 +94,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 hilt_plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt_plugin" }
 ksp_plugin = { id = "com.google.devtools.ksp", version.ref = "ksp_plugin" }
 #KOTZILLA
-kotzilla = { id = "io.kotzilla.kotzilla-plugin", version.ref = "kotzilla" }
+#kotzilla = { id = "io.kotzilla.kotzilla-plugin", version.ref = "kotzilla" }

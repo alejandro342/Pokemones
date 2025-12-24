@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp.plugin)
     alias(libs.plugins.hilt.plugin)
-    alias(libs.plugins.kotzilla)
+   // alias(libs.plugins.kotzilla)
 }
 
 android {
@@ -100,7 +100,7 @@ dependencies {
     implementation(libs.androidx.media3.ui)
 
     //kotzilla
-    implementation(libs.kotzilla.sdk.compose)
+   // implementation(libs.kotzilla.sdk.compose)
 
     //koin
     implementation(libs.koin.core)
@@ -109,10 +109,10 @@ dependencies {
 
 }
 
-kotzilla {
+/*kotzilla {
 
 //    versionName = "1.0.0"
 //    keyGeneration = KotzillaKeyGeneration.COMPOSE
 
     composeInstrumentation = true
-}
+}*/
