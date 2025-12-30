@@ -1,2 +1,2 @@
 # Pokemones
-Lista de pokemones, retrifit, jetpack compose
+Lista de pokemones, retrofit, jetpack compose
